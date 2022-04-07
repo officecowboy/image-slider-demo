@@ -1,1 +1,1 @@
-# image-slider-demo
+## image-slider-demo
