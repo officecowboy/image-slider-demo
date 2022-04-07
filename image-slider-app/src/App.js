@@ -1,4 +1,7 @@
 import "./App.css";
+import testImage from "./assets/test-photo.jpg";
+import { ReactComponent as BackArrow } from "./assets/arrow-left.svg";
+import { ReactComponent as NextArrow } from "./assets/arrow-right.svg";
 
 function App() {
   return (
@@ -12,10 +15,12 @@ function App() {
 
       <figure>
         <nav>
+          <BackArrow />
+          <NextArrow />
         </nav>
         <figcaption>
         </figcaption>
-        <img src="" alt=""></img>
+        <img src={testImage} alt=""></img>
       </figure>
 
     </div>
