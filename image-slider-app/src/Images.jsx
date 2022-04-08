@@ -16,11 +16,6 @@ let Images = () => {
     apiCall()
   }, [])
 
-  let imageURL = []
-  imageURL.push(images.map(image => image.urls.regular))
-
-  console.log(imageURL)
-
   const [currentImage, setCurrentImage] = useState(0)
 
   const handleBack = () => {
@@ -46,8 +41,11 @@ let Images = () => {
         <NextArrow onClick={handleNext} />
       </nav>
       <figcaption>
+        {currentImage + 1} / {images.length}
       </figcaption>
-      <img alt="" src={imageURL[currentImage]} />
+      {images.length &&
+        <img alt="" src={images[currentImage].urls.regular} />
+      }
     </figure>
   )
 }
